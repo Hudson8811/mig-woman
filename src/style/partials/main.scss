@@ -60,25 +60,25 @@ body{
 				&.fb{
 					background-image: url("../images/fb.svg");
 					&:hover{
-						background-image: url("../images/fb_red.svg");
+						transform: scale(1.1);
 					}
 				}
 				&.tw{
 					background-image: url("../images/tw.svg");
 					&:hover{
-						background-image: url("../images/tw_red.svg");
+						transform: scale(1.1);
 					}
 				}
 				&.ok{
 					background-image: url("../images/ok.svg");
 					&:hover{
-						background-image: url("../images/ok_red.svg");
+						transform: scale(1.1);
 					}
 				}
 				&.vk{
 					background-image: url("../images/vk.svg");
 					&:hover{
-						background-image: url("../images/vk-red.svg");
+						transform: scale(1.1);
 					}
 				}
 			}
@@ -682,4 +682,113 @@ body{
 	100% {
 		transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,10,0,1);
 	}
+}
+
+
+
+
+
+.index__test {
+	padding-top: 2.29166vw;
+}
+
+.index__test .test__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 70.9375vw;
+	margin: 0 auto;
+}
+
+.index__test .test__inner .test__button {
+	display: block;
+	transition: transform 0.2s linear;
+	img{
+		width: 100%;
+		display: block;
+	}
+}
+.index__test .test__inner .test__button.current,
+.index__test .test__inner .test__button:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+.index__test .test__inner .test__button.left {
+	width: 12.4479vw;
+}
+.index__test .test__inner .test__button.right {
+	width: 11.5625vw;
+}
+
+.index__test .test__inner .test__cards {
+	position: relative;
+	width: 28.59375vw;
+	height: 31.510416vw;
+	line-height: 31.510416vw;
+}
+
+
+.test-card {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 28.59375vw;
+	height: 31.510416vw;
+	line-height: 1;
+	background: #fff;
+	transform: rotate(5deg);
+	transform-origin: left bottom;
+	background: rgba(136,0,0,1);
+	box-sizing: border-box;
+	padding: 1.04vw;
+	&::before{
+		content: "";
+		display: block;
+		background: #ffffff;
+		position: absolute;
+		width: calc(100% - 2.08vw);
+		height: calc(100% - 2.08vw);
+		top: 1.04vw;
+		left: 1.04vw;
+		z-index: -1;
+	}
+
+	.test__number{
+		color: #878787;
+		font-size: 1.40625vw;
+		font-weight: 300;
+		margin-top: 2.34375vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::before, &::after{
+			content: "";
+			display: block;
+			width: 3.125vw;
+			height: 1px;
+			background: #878787;
+			margin: 0 0.36458vw;
+		}
+	}
+	.card__pic{
+		width: 21.0416vw;
+		margin: 2.34375vw auto;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.card__text{
+		width: 21.0416vw;
+		margin: 0 auto;
+		color: #000000;
+		font-size: 1.25vw;
+		font-weight: 500;
+		text-align: center;
+	}
+}
+.test-card.current {
+	transform: rotate(0);
+	box-shadow: 0.19rem 0.44rem 2.19rem rgba(0,0,0,0.15);
+	background: linear-gradient(to right, rgba(136,0,0,1) 0%, rgba(229,0,23,1) 100%);
 }
