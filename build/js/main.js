@@ -206,6 +206,7 @@ function selectAnswer(res){
     startInterval();
     if (res) {
         resultNumber++;
+        if (resultNumber > 20) resultNumber = 20;
         testResults.push(curNumber);
         $('.smile').removeClass('pos-'+(resultNumber-1)).addClass('pos-'+resultNumber);
         if (resultNumber == 5) $('.smile').removeClass('smile-1').addClass('smile-2');

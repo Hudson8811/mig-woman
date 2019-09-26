@@ -100,7 +100,7 @@
           width: 11.0677vw;
           position: absolute;
           top: 1.8vw;
-          left: 0;
+          left: -2.15%;
           .img{
             height: 24vw;
             width: 11.0677vw;
@@ -109,6 +109,27 @@
             font-size: 3.90625vw;
             margin-top: -2vw;
           }
+
+          &.pos-1{left: -2.15%;}
+          &.pos-2{left: 4.1%;}
+          &.pos-3{left: 8.2%;}
+          &.pos-4{left: 12.3%;}
+          &.pos-5{left: 19.05%;}
+          &.pos-6{left: 23.1%;}
+          &.pos-7{left: 27.3%;}
+          &.pos-8{left: 31.45%;}
+          &.pos-9{left: 38.1%;}
+          &.pos-10{left: 42.15%;}
+          &.pos-11{left: 46.45%;}
+          &.pos-12{left: 50.5%;}
+          &.pos-13{left: 57.1%;}
+          &.pos-14{left: 61.2%;}
+          &.pos-15{left: 65.5%;}
+          &.pos-16{left: 69.5%;}
+          &.pos-17{left: 77.2%;}
+          &.pos-18{left: 81.2%;}
+          &.pos-19{left: 85.4%;}
+          &.pos-20{left: 89.6%;}
         }
       }
       .question{
