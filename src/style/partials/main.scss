@@ -171,6 +171,37 @@ body{
 	width: 100%;
 	height: 39.5vw;
 
+	.arr-left{
+		position: absolute;
+		width: 6.09375vw;
+		height: 0.5208vw;
+		display: block;
+		background: url("../images/arr-left.png") center center no-repeat;
+		background-size: contain;
+		left: 27.76vw;
+		top: 20.78125vw;
+		&::before{
+			content: "";
+			display: block;
+			width: 3vw;
+			height: 4vw;
+			position: absolute;
+			left: 1.6vw;
+			top: -.7vw;
+			background: url("../images/kursor.svg") center center no-repeat;
+			background-size: contain;
+		}
+	}
+	.arr-right{
+		position: absolute;
+		width: 6.09375vw;
+		height: 0.5208vw;
+		display: block;
+		background: url("../images/arr-right.png") center center no-repeat;
+		background-size: contain;
+		left: 66.1979vw;
+		top: 20.78125vw;
+	}
 
 	.mig-circle{
 		position: absolute;
