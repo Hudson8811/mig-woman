@@ -94,3 +94,43 @@ function nextQuest(obj) {
 function testEnd() {
     alert('test закончен');
 }
+
+$('.line-block').mousemove(function (e) {
+    offset = $(this).offset();
+    cursor = (e.pageX - offset.left);
+    width = $(this).outerWidth();
+    percent = cursor / width * 100 - 4.2417559;
+    if (percent > 89.6) {
+        percent = 89.6;
+    } else if (percent < -0.15){
+        percent = -0.15;
+    }
+    $('.smile').removeClassWild("status_*");
+    if (percent > 72.8){
+        $('.smile').addClass('status_5');
+    } else if (percent > 53.4){
+        $('.smile').addClass('status_4');
+    } else if (percent > 34.6){
+        $('.smile').addClass('status_3');
+    } else if (percent > 15){
+        $('.smile').addClass('status_2');
+    }
+
+    $('.smile').css({'left':percent+'%'});
+});
+
+
+$('.border-block').mouseleave(function (e) {
+    $('.smile').removeAttr( 'style' ).removeClassWild("status_*");
+});
+
+
+
+(function($) {
+    $.fn.removeClassWild = function(mask) {
+        return this.removeClass(function(index, cls) {
+            var re = mask.replace(/\*/g, '\\S+');
+            return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
+        });
+    };
+})(jQuery);

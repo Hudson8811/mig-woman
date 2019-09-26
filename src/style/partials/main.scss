@@ -273,6 +273,11 @@ body{
 			background-size: 102% auto;
 			height: 11.979vw;
 			position: relative;
+			&:hover{
+				.smile{
+					transition: none;
+				}
+			}
 			.smile{
 				width: 4.47916vw;
 				position: absolute;
@@ -295,27 +300,27 @@ body{
 					width: 100%;
 					margin-top: -0.8vw;
 				}
-				&.smile-1{
+				&.smile-1, &.status_1{
 					.img{
 						background-image: url("../images/smile-1.svg");
 					}
 				}
-				&.smile-2{
+				&.smile-2, &.status_2{
 					.img{
 						background-image: url("../images/smile-2.svg");
 					}
 				}
-				&.smile-3{
+				&.smile-3, &.status_3{
 					.img{
 						background-image: url("../images/smile-3.svg");
 					}
 				}
-				&.smile-4{
+				&.smile-4, &.status_4{
 					.img{
 						background-image: url("../images/smile-4.svg");
 					}
 				}
-				&.smile-5{
+				&.smile-5, &.status_5{
 					.img{
 						background-image: url("../images/smile-5.svg");
 					}
