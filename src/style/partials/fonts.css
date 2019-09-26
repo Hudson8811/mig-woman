@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: url('../fonts/FedraSansPro-BoldLF.eot?#iefix') format('embedded-opentype'),  url('../fonts/FedraSansPro-BoldLF.otf')  format('opentype'),
+    url('../fonts/FedraSansPro-BoldLF.woff') format('woff'), url('../fonts/FedraSansPro-BoldLF.ttf')  format('truetype'), url('../fonts/FedraSansPro-BoldLF.svg#FedraSansPro-BoldLF') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: url('../fonts/FedraSansPro-BoldItalicLF.eot?#iefix') format('embedded-opentype'),  url('../fonts/FedraSansPro-BoldItalicLF.otf')  format('opentype'),
+    url('../fonts/FedraSansPro-BoldItalicLF.woff') format('woff'), url('../fonts/FedraSansPro-BoldItalicLF.ttf')  format('truetype'), url('../fonts/FedraSansPro-BoldItalicLF.svg#FedraSansPro-BoldItalicLF') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: url('../fonts/FedraSansPro-BookLF.eot?#iefix') format('embedded-opentype'),  url('../fonts/FedraSansPro-BookLF.otf')  format('opentype'),
+    url('../fonts/FedraSansPro-BookLF.woff') format('woff'), url('../fonts/FedraSansPro-BookLF.ttf')  format('truetype'), url('../fonts/FedraSansPro-BookLF.svg#FedraSansPro-BookLF') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: url('../fonts/FedraSansPro-LightLF.eot?#iefix') format('embedded-opentype'),  url('../fonts/FedraSansPro-LightLF.otf')  format('opentype'),
+    url('../fonts/FedraSansPro-LightLF.woff') format('woff'), url('../fonts/FedraSansPro-LightLF.ttf')  format('truetype'), url('../fonts/FedraSansPro-LightLF.svg#FedraSansPro-LightLF') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: url('../fonts/FedraSansPro-MediumLF.eot?#iefix') format('embedded-opentype'),  url('../fonts/FedraSansPro-MediumLF.otf')  format('opentype'),
+    url('../fonts/FedraSansPro-MediumLF.woff') format('woff'), url('../fonts/FedraSansPro-MediumLF.ttf')  format('truetype'), url('../fonts/FedraSansPro-MediumLF.svg#FedraSansPro-MediumLF') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
