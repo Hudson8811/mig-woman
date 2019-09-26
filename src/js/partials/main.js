@@ -56,6 +56,10 @@ $(document).ready(function() {
             }
         });
     });
+
+    $.getJSON('results.json', function(data) {
+        results = data.results;
+    });
 });
 
 
@@ -68,6 +72,7 @@ wow.init();
 resultNumber = 0;
 testResults = [];
 curNumber = 0;
+procent = 0;
 
 function selectAnswer(res){
     if (res) {
@@ -95,6 +100,8 @@ function testEnd() {
     alert('test закончен');
 }
 
+
+
 $('.line-block').mousemove(function (e) {
     offset = $(this).offset();
     cursor = (e.pageX - offset.left);
@@ -117,11 +124,77 @@ $('.line-block').mousemove(function (e) {
     }
 
     $('.smile').css({'left':percent+'%'});
+
+
+    if (percent > 87.6){
+        $('.question').html(results[19].text);
+        $('.smile .text').html(results[19].procent+'%');
+    } else if (percent > 83.4){
+        $('.question').html(results[18].text);
+        $('.smile .text').html(results[18].procent+'%');
+    } else if (percent > 79.2){
+        $('.question').html(results[17].text);
+        $('.smile .text').html(results[17].procent+'%');
+    } else if (percent > 75.2){
+        $('.question').html(results[16].text);
+        $('.smile .text').html(results[16].procent+'%');
+    } else if (percent > 67.5){
+        $('.question').html(results[15].text);
+        $('.smile .text').html(results[15].procent+'%');
+    } else if (percent > 63.5){
+        $('.question').html(results[14].text);
+        $('.smile .text').html(results[14].procent+'%');
+    } else if (percent > 59.2){
+        $('.question').html(results[13].text);
+        $('.smile .text').html(results[13].procent+'%');
+    } else if (percent > 55.1){
+        $('.question').html(results[12].text);
+        $('.smile .text').html(results[12].procent+'%');
+    } else if (percent > 48.5){
+        $('.question').html(results[11].text);
+        $('.smile .text').html(results[11].procent+'%');
+    } else if (percent > 44.45){
+        $('.question').html(results[10].text);
+        $('.smile .text').html(results[10].procent+'%');
+    } else if (percent > 40.15){
+        $('.question').html(results[9].text);
+        $('.smile .text').html(results[9].procent+'%');
+    } else if (percent > 36.1){
+        $('.question').html(results[8].text);
+        $('.smile .text').html(results[8].procent+'%');
+    } else if (percent > 29.45){
+        $('.question').html(results[7].text);
+        $('.smile .text').html(results[7].procent+'%');
+    } else if (percent > 25.3){
+        $('.question').html(results[6].text);
+        $('.smile .text').html(results[6].procent+'%');
+    } else if (percent > 21.1){
+        $('.question').html(results[5].text);
+        $('.smile .text').html(results[5].procent+'%');
+    } else if (percent > 17.05){
+        $('.question').html(results[4].text);
+        $('.smile .text').html(results[4].procent+'%');
+    } else if (percent > 10.3){
+        $('.question').html(results[3].text);
+        $('.smile .text').html(results[3].procent+'%');
+    } else if (percent > 6.2){
+        $('.question').html(results[2].text);
+        $('.smile .text').html(results[2].procent+'%');
+    } else if (percent > 2.1){
+        $('.question').html(results[1].text);
+        $('.smile .text').html(results[1].procent+'%');
+    } else {
+        $('.question').html(results[0].text);
+        $('.smile .text').html(results[0].procent+'%');
+    }
+
 });
 
 
 $('.border-block').mouseleave(function (e) {
     $('.smile').removeAttr( 'style' ).removeClassWild("status_*");
+    $('.smile .text').html(procent.toFixed()+'%');
+    $('.question').html('');
 });
 
 
