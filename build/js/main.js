@@ -157,6 +157,9 @@ function selectAnswer(res){
         if (resultNumber == 9) $('.smile').removeClass('smile-2').addClass('smile-3');
         if (resultNumber == 13) $('.smile').removeClass('smile-3').addClass('smile-4');
         if (resultNumber == 17) $('.smile').removeClass('smile-4').addClass('smile-5');
+
+        procent = (100/countQuestions)*resultNumber;
+        $('.smile .text').html(procent.toFixed()+'%');
     }
     if (curNumber === countQuestions-1) testEnd();
     else curNumber++;
