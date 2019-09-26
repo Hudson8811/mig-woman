@@ -84,7 +84,10 @@ $(document).ready(function() {
     });
 });
 
-new WOW().init();
+wow = new WOW({
+    mobile: false
+});
+wow.init();
 
 
 
@@ -112,13 +115,43 @@ $('.test__card').drags({
         obj.css('transform','rotate('+offs+'deg) scale('+
             (1 -Math.abs(offs/100))+')');
         if (Math.abs(pos) > 40) {
-            main.curAnswer = pos < 0 ? 1 : 2
+            curAnswer = pos < 0 ? 1 : 2
         }
     },
     onDrop: function (obj,e) {
         let res = obj.data('left') - obj.data('start');
-        if (Math.abs(res) > 40) main.selectAnswer(res  > 0);
+        console.log(res);
+        if (Math.abs(res) > 40) selectAnswer(res  > 0);
         obj.css({top:'', left: ''});
         obj.css('transform','');
     }
 });
+
+var resultNumber = 0;
+var testResults = [];
+
+function selectAnswer(res){
+    curAnswer = 0;
+    //statistics
+    let stat = '';
+    if (this.curNumber === 0) stat = 'test_start';
+    else if (this.curNumber === this.countQuestions-1) stat = 'test_finish';
+    //if (stat !== '') this.goal(stat);
+    goal('quest_'+(this.curNumber+1));
+
+    //save result
+    if (res) {
+        resultNumber++;
+        testResults.push(curNumber);
+    }
+
+    //check end
+    if (this.curNumber === this.countQuestions-1) this.testEnd();
+    else this.curNumber++;
+}
+
+function goal(goal) {
+    if (typeof window['ga'] == 'function') ga('send', 'event', goal);
+    else console.log('no analitics');
+    console.log('goal:',goal);
+}
