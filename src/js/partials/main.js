@@ -43,6 +43,8 @@ $(document).ready(function() {
                         $('.test__button.right').removeClass('current');
                     }
                 }
+
+                resetInterval();
             },
             onDrop: function (obj,e) {
                 let res = obj.data('left') - obj.data('start');
@@ -53,6 +55,7 @@ $(document).ready(function() {
                 obj.css({top:'', left: ''});
                 obj.css('transform','');
                 $('.test__button').removeClass('current');
+                resetInterval();
             }
         });
     });
@@ -69,12 +72,59 @@ wow = new WOW({
 wow.init();
 
 
+var counter = 0;
+var timer = null;
+
+function tictac(){
+    counter++;
+    if (counter == 5){
+        $('.mig-circle').addClass('active');
+    }
+}
+
+function resetInterval(){
+    clearInterval(timer);
+    counter=0;
+    timer= setInterval("tictac()", 1000);
+}
+function startInterval(){
+    if (!timer){
+        timer= setInterval("tictac()", 1000);
+    }
+}
+function stopInterval(){
+    clearInterval(timer);
+}
+
+
 resultNumber = 0;
 testResults = [];
 curNumber = 0;
 procent = 0;
 
+$('.test__button.left').click(function () {
+    selectAnswer(false);
+    var item = $('.test__card.current');
+    nextQuest(item);
+    item.css({top:'', left: ''});
+    item.css('transform','');
+    $('.test__button').removeClass('current');
+    resetInterval();
+});
+
+$('.test__button.right').click(function () {
+    selectAnswer(true);
+    var item = $('.test__card.current');
+    nextQuest(item);
+    item.css({top:'', left: ''});
+    item.css('transform','');
+    $('.test__button').removeClass('current');
+    resetInterval();
+});
+
+
 function selectAnswer(res){
+    startInterval();
     if (res) {
         resultNumber++;
         testResults.push(curNumber);
@@ -97,7 +147,8 @@ function nextQuest(obj) {
 }
 
 function testEnd() {
-    alert('test закончен');
+    stopInterval();
+    $('.section-2').slideUp();
 }
 
 
@@ -207,3 +258,5 @@ $('.border-block').mouseleave(function (e) {
         });
     };
 })(jQuery);
+
+
