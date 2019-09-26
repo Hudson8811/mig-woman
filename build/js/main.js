@@ -152,6 +152,11 @@ function selectAnswer(res){
     if (res) {
         resultNumber++;
         testResults.push(curNumber);
+        $('.smile').removeClass('pos-'+(resultNumber-1)).addClass('pos-'+resultNumber);
+        if (resultNumber == 5) $('.smile').removeClass('smile-1').addClass('smile-2');
+        if (resultNumber == 9) $('.smile').removeClass('smile-2').addClass('smile-3');
+        if (resultNumber == 13) $('.smile').removeClass('smile-3').addClass('smile-4');
+        if (resultNumber == 17) $('.smile').removeClass('smile-4').addClass('smile-5');
     }
     if (curNumber === countQuestions-1) testEnd();
     else curNumber++;
@@ -165,17 +170,3 @@ function nextQuest(obj) {
 function testEnd() {
     alert('test закончен');
 }
-
-/*let stat = '';
-    if (curNumber === 0) stat = 'test_start';
-    else if (curNumber === countQuestions-1) stat = 'test_finish';*/
-//goal('quest_'+(this.curNumber+1));
-
-/*
-//analitic
-function goal(goal) {
-    if (typeof window['ga'] == 'function') ga('send', 'event', goal);
-    else console.log('no analitics');
-    console.log('goal:',goal);
-}
- */
