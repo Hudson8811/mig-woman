@@ -138,7 +138,7 @@ function selectAnswer(res){
         procent = (100/countQuestions)*resultNumber;
         $('.smile .text').html(procent.toFixed()+'%');
     }
-    if (curNumber === countQuestions-1) testEnd();
+    if (curNumber === countQuestions-1) testEnd(procent.toFixed());
     else curNumber++;
 }
 
@@ -147,9 +147,21 @@ function nextQuest(obj) {
     $('.test__cards .test__card:last-child').addClass('current');
 }
 
-function testEnd() {
+function testEnd(procent) {
     stopInterval();
-    $('.section-2').slideUp();
+    var status = '';
+    if (procent > 66){
+        status = 'result-3';
+    } else if (procent > 33){
+        status = 'result-2';
+    } else{
+        status = 'result-1';
+    }
+    $('.section-2').slideUp(300,function () {
+        $('.section-result .border-block').addClass(status);
+        $('.section-result .line-block .procent').html(procent +'%');
+        $('.section-result').slideDown(300);
+    });
 }
 
 
