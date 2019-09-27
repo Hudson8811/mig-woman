@@ -245,7 +245,7 @@ function testEnd(procent) {
 
 
 
-$('.line-block').mousemove(function (e) {
+$('.line-block').on('mousemove touchstart touchmove ',function (e) {
     offset = $(this).offset();
     cursor = (e.pageX - offset.left);
     width = $(this).outerWidth();
