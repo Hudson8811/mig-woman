@@ -78,11 +78,15 @@ var timer = null;
 function tictac(){
     counter++;
     if (counter == 5){
+        $.getJSON('get_motivation.json', function(data) {
+            $('.mig-circle .text').html(data.motivation);
+        });
         $('.mig-circle').addClass('active');
     }
 }
 
 function resetInterval(){
+    $('.mig-circle').removeClass('active');
     clearInterval(timer);
     counter=0;
     timer= setInterval("tictac()", 1000);
