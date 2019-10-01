@@ -173,6 +173,16 @@
     .mig-circle{
       display: none !important;
     }
+
+
+    .on-mobile-text{
+      display: block;
+      width: 52.60416vw;
+      font-size: 2.8vw;
+      text-align: center;
+      line-height: 1.2;
+      margin: 0 auto 2.4vw;
+    }
   }
 
   .section-3{
@@ -460,7 +470,7 @@
 
 
   .index__test {
-    padding-top: 12.36979vw;
+    padding-top: 3.36979vw;
   }
 
   .index__test .test__inner {
@@ -514,15 +524,7 @@
     }
     .card__pic{
       width: 52.60416vw;
-      margin: 5.859375vw auto 0;
-    }
-    .on-mobile-text{
-      display: block;
-      width: 52.60416vw;
-      font-size: 2.125vw;
-      text-align: center;
-      line-height: 1.2;
-      margin: 1.5vw auto;
+      margin: 5.859375vw auto;
     }
     .card__text{
       width: 52.60416vw;
