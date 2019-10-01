@@ -8,7 +8,7 @@ $(document).ready(function() {
     $.getJSON('situations.json', function(data) {
         countQuestions = data.situations.length;
         $.each(data.situations, function( index, value ) {
-            $('.test__cards').prepend('<div class="test__card test-card"><div class="test__number"><span class="num_cur">'+(index+1)+'</span>/<span class="num_max">'+countQuestions+'</span></div><div class="card__pic"><img src="'+value.image+'" alt=""></div><div class="card__text">'+value.text+'</div></div>');
+            $('.test__cards').prepend('<div class="test__card test-card"><div class="test__number"><span class="num_cur">'+(index+1)+'</span>/<span class="num_max">'+countQuestions+'</span></div><div class="card__pic"><img src="'+value.image+'" alt=""></div><div class="on-mobile-text">Сдвигай вправо, если эта ситуация для тебя "боль", влево - если "ерунда"</div><div class="card__text">'+value.text+'</div></div>');
         });
         $('.test__cards .test__card:last-child').addClass('current');
 
