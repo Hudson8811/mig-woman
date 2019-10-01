@@ -237,17 +237,29 @@ function nextQuest(obj) {
 function testEnd(procent) {
     stopInterval();
     var status = '';
+    var dataUrl = '';
+    var dataTitle = '';
+    var dataImage="https://bolitgolova.wday.ru/images/share.jpg";
     if (procent > 66){
         status = 'result-3';
+        dataTitle = "У меня " + $('.title-3').html().toLowerCase();
+        dataUrl = "https://bolitgolova.wday.ru/share/3/";
     } else if (procent > 33){
         status = 'result-2';
+        dataTitle = "У меня " + $('.title-2').html().toLowerCase();
+        dataUrl = "https://bolitgolova.wday.ru/share/2/";
     } else{
         status = 'result-1';
+        dataTitle = "У меня " + $('.title-1').html().toLowerCase();
+        dataUrl = "https://bolitgolova.wday.ru/share/1/";
     }
     $('.section-2').slideUp(300,function () {
         $('.section-result .border-block').addClass(status);
         $('.section-result .line-block .procent').html(procent +'%');
         $('.section-result').slideDown(300);
+        $('.section-result .share .flex-block').attr('data-url', dataUrl);
+        $('.section-result .share .flex-block').attr('data-title', dataTitle);
+        $('.section-result .share .flex-block').attr('data-image', dataImage);
     });
 
     //отправка данных
