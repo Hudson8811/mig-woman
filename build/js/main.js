@@ -78,6 +78,7 @@ $.fn.drags = function (opt) {
 /* my scripts */
 
 $(document).ready(function() {
+    startInterval();
     //http://special2.woman.ru/mig/get_motivation.php
     $.getJSON('get_motivation.json', function(data) {
         $('.mig-circle .text').html(data.motivation);
@@ -207,7 +208,6 @@ $('.test__button.right').click(function () {
 
 
 function selectAnswer(res){
-    startInterval();
     if (res) {
         resultNumber++;
         if (resultNumber > 20) resultNumber = 20;
