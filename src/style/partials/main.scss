@@ -167,17 +167,17 @@ body{
 }
 
 .section-result{
-	padding: 2.60416vw 0;
+	padding: 2.083328vw 0;
 	display: none;
 
 	.border-block{
-		width: 51.979166vw;
-		height: 40.052vw;
+		width: 41.5833328vw;
+		height: 32.0416vw;
 		margin: 0 auto;
 		box-sizing: border-box;
 		border: 1px solid #e01f26;
-		border-radius: 1vw;
-		padding: 1.04166vw 0 1.5625vw;
+		border-radius: 0.8vw;
+		padding: 0.833328vw 0 1.25vw;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -185,7 +185,7 @@ body{
 		align-items: center;
 		.title{
 			color: #9e1502;
-			font-size: 2.0833vw;
+			font-size: 1.66664vw;
 			font-weight: 700;
 			text-transform: uppercase;
 			text-align: center;
@@ -194,28 +194,28 @@ body{
 		.text{
 			text-align: center;
 			color: #000000;
-			font-size: 1.8229vw;
+			font-size: 1.45832vw;
 			display: none;
 		}
 
 		.line-block{
 			position: absolute;
-			right: 11.45833vw;
-			top: 6.77083vw;
+			right: 9.166664vw;
+			top: 5.416664vw;
 			.line{
-				width: 1.875vw;
+				width: 1.5vw;
 				display: block;
 			}
 			.mig{
 				position: absolute;
-				left: -3vw;
-				bottom: 1.9375vw;
+				left: -2.4vw;
+				bottom: 1.55vw;
 				display: flex;
 				align-items: center;
 				.procent{
 					display: block;
-					width: 7.8125vw;
-					height: 3.9583vw;
+					width: 6.25vw;
+					height: 3.16664vw;
 					background-position: center center;
 					background-repeat: no-repeat;
 					background-size: contain;
@@ -226,31 +226,17 @@ body{
 
 		.head{
 			display: none;
-		}
-		.head-1{
-			width: 36.5625vw;
+			width: 29.25vw;
 			position: absolute;
-			left: 1.5625vw;
-			top: 3.38541vw;
-		}
-		.head-2{
-			width: 36.5625vw;
-			position: absolute;
-			left: 1.5625vw;
-			top: 3.38541vw;
-		}
-		.head-3{
-			width: 36.5625vw;
-			position: absolute;
-			left: 1.5625vw;
-			top: 3.38541vw;
+			left: 1.25vw;
+			top: 2.708328vw;
 		}
 
 		.min-img{
-			width: 10.2083vw;
+			width: 8.16664vw;
 			position: absolute;
-			left: 6.7vw;
-			top: 25.3vw;
+			left: 5.36vw;
+			top: 20.24vw;
 		}
 
 
@@ -267,7 +253,7 @@ body{
 			}
 			.line-block {
 				.mig {
-					bottom: 1.9375vw;
+					bottom: 1.55vw;
 					.procent{
 						background-image: url("../images/result-1.svg");
 					}
@@ -286,7 +272,7 @@ body{
 			}
 			.line-block {
 				.mig {
-					bottom: 9.02083vw;
+					bottom: 7.216664vw;
 					.procent{
 						background-image: url("../images/result-2.svg");
 					}
@@ -305,7 +291,7 @@ body{
 			}
 			.line-block {
 				.mig {
-					bottom: 16.625vw;
+					bottom: 13.3vw;
 					.procent{
 						background-image: url("../images/result-3.svg");
 					}
@@ -336,6 +322,7 @@ body{
 				background-size: contain;
 				background-position: center center;
 				background-repeat: no-repeat;
+				margin-top: 0.34375vw;
 				+a{
 					margin-left: .7vw;
 				}
