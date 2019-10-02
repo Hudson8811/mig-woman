@@ -176,7 +176,7 @@ function testEnd(procent) {
     }
     $('.section-2').slideUp(300,function () {
         $('.section-result .border-block').addClass(status);
-        $('.section-result .line-block .procent').html(procent +'%');
+        //$('.section-result .line-block .procent').html(procent +'%');
         $('.section-result').slideDown(300);
         $('.section-result .share .flex-block').attr('data-url', dataUrl);
         $('.section-result .share .flex-block').attr('data-title', dataTitle);

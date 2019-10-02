@@ -84,15 +84,12 @@
           width: 3.2878vw;
         }
         .mig{
-          left: -8.310889vw;
-          bottom: 1.6439vw;
-          img{
-            width: 17.9vw;
-          }
+          left: -5.26042vw;
+          bottom: 3.397358vw;
+
           .procent{
-            font-size: 3.19649vw;
-            margin-top: 0.730615vw;
-            margin-left: 1.6439vw;
+            width: 13.699vw;
+            height: 6.94078vw;
           }
         }
       }
@@ -114,26 +111,31 @@
         top: 5.9363vw;
       }
 
-
+      .min-img{
+        width: 17.9vw;
+        position: absolute;
+        left: 10.2743vw;
+        top: 44.2066vw;
+      }
 
       &.result-1{
         .line-block {
           .mig {
-            bottom: 1.6439vw;
+            bottom: 3.397358vw;
           }
         }
       }
       &.result-2{
         .line-block {
           .mig {
-            bottom: 14.0645vw;
+            bottom: 15.8178vw;
           }
         }
       }
       &.result-3{
         .line-block {
           .mig {
-            bottom: 27.3985vw;
+            bottom: 29.1515vw;
           }
         }
       }
@@ -418,7 +420,7 @@
   }
 
   .section-9{
-    height: 90.49479vw;
+    height:100.49479vw;
     background: url("../images/bg-1-2.jpg") center top no-repeat;
     background-size: cover;
     .head{
@@ -451,16 +453,16 @@
         line-height: 7.34635vw;
       }
     }
-  }
-
-  .section-10{
-    padding: 3.90625vw 0;
-    .text{
+    .text-bot{
+      margin-top: 83.66vw;
       font-size: 5.46875vw;
     }
   }
 
+
+
   .copy{
+    padding-top: 3.3333312vw;
     padding-bottom: 5.20833vw;
     .text{
       font-size: 2.0833vw;
