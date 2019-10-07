@@ -63,6 +63,8 @@ $(document).ready(function() {
 
     $.getJSON('results.json', function(data) {
         results = data.results;
+        $('.question').html(results[0].text);
+        $('.smile .text').html(results[0].procent+'%');
     });
 });
 
@@ -133,15 +135,6 @@ function selectAnswer(res){
         resultNumber++;
         if (resultNumber > 20) resultNumber = 20;
 
-        $('.smile').removeClass('pos-'+(resultNumber-1)).addClass('pos-'+resultNumber);
-        if (resultNumber == 5) $('.smile').removeClass('smile-1').addClass('smile-2');
-        if (resultNumber == 9) $('.smile').removeClass('smile-2').addClass('smile-3');
-        if (resultNumber == 13) $('.smile').removeClass('smile-3').addClass('smile-4');
-        if (resultNumber == 17) $('.smile').removeClass('smile-4').addClass('smile-5');
-
-        procent = (100/countQuestions)*resultNumber;
-        $('.smile .text').html(procent.toFixed()+'%');
-
         testResults.push(1);
     } else {
         testResults.push(0);
@@ -176,7 +169,6 @@ function testEnd(procent) {
     }
     $('.section-2').slideUp(300,function () {
         $('.section-result .border-block').addClass(status);
-        //$('.section-result .line-block .procent').html(procent +'%');
         $('.section-result').slideDown(300);
         $('.section-result .share .flex-block').attr('data-url', dataUrl);
         $('.section-result .share .flex-block').attr('data-title', dataTitle);
@@ -193,6 +185,8 @@ function testEnd(procent) {
         success: function(data) {
             var parse = JSON.parse(data);
             results = parse.results;
+            $('.question').html(results[0].text);
+            $('.smile .text').html(results[0].procent+'%');
         }
     });
 }
@@ -556,8 +550,8 @@ $('.line-block').on('touchstart touchmove ',function (e) {
 
 $('.border-block').mouseleave(function (e) {
     $('.smile').removeAttr( 'style' ).removeClassWild("status_*");
-    $('.smile .text').html(procent.toFixed()+'%');
-    $('.question').html('');
+    $('.question').html(results[0].text);
+    $('.smile .text').html(results[0].procent+'%');
 });
 
 
